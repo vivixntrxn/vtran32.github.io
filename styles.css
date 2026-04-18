@@ -1,0 +1,45 @@
+/* Color palette */
+:root {
+  --shadow-grey: #1B1725;
+  --porcelain: #FDFFFC;
+  --emerald: #4CB963;
+  --ocean-blue: #2E83B0;
+  --green: #157F1F;
+}
+
+/* Body */
+body {
+    background-color: var(--porcelain)
+}
+
+/* Header */
+.header {
+    background-color: var(--shadow-grey);
+    padding: 15px;
+}
+
+.header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--porcelain);
+    font-size: 2em;
+    margin-bottom: -10px;
+}
+
+.tagline {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--emerald);
+    font-size: 1.1em;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 6em;
+    height: 6em;
+    border: 3px solid var(--porcelain);
+    border-radius: 10px;
+}
