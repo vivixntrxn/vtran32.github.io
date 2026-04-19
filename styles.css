@@ -2,7 +2,7 @@
 :root {
   --shadow-grey: #1B1725;
   --porcelain: #FDFFFC;
-  --emerald: 	#64E079;
+  --emerald: #64E079;
   --ocean-blue: #2E83B0;
   --green: #157F1F;
 }
@@ -66,7 +66,7 @@ body {
     margin-right: -15px;
 }
 
-.menu-toggle:active {
+.menu-toggle:hover {
     opacity: 0.5;
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 .hero h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-top: 0;
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .stat .number {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: var(--green);
     font-weight: bold;
 }
@@ -146,7 +146,7 @@ body {
 .stat .label {
     display: block;
     color: var(--shadow-grey);
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -154,6 +154,74 @@ body {
     width: 100%;
     max-width: none;
     display: block;
+}
+
+/* Learn Section */
+.learn-section {
+    padding: 0 1em;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.learn-card {
+    border: 2px solid var(--shadow-grey);
+    border-radius: 15px;
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+.learn-card:hover {
+    background-color: lightgrey;
+    transform: translateY(-5px);
+}
+
+.learn-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.learn-caption {
+    font-size: 0.9em;
+    color: var(--green);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-card {
+    background: var(--green);
+    color: var(--shadow-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-card:hover {
+    background-color: var(--green);
+    transform: none;
+}
+
+.feedback-btn {
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 6px;
+    background: var(--shadow-grey);
+    color: var(--porcelain);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1em;
+}
+
+.feedback-btn:hover {
+    background: var(--ocean-blue);
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    /* Learn Section */
+    .learn-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 1.5em;
+    }
 }
 
 /* Desktop */
@@ -197,5 +265,16 @@ body {
     .hero {
         width: 80vw; 
         padding: 2em;
+    }
+
+    /* Learn Section */
+   .learn-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 1.5em;
+    }
+
+    .form-card {
+        grid-column: 1 / -1;
     }
 }
