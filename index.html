@@ -173,7 +173,7 @@
 
     // Highlight current page link
     let currentPage = window.location.pathname.split('/').pop();
-    if (currentPage === "") {
+    if (currentPage === "" || currentPage === "/") {
         currentPage = "index.html";
     }
 
