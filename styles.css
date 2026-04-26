@@ -380,6 +380,42 @@ body {
     color: var(--shadow-grey);
 }
 
+/* DUPR Section */
+.dupr-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+    color: var(--shadow-grey);
+    line-height: 1.5;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.dupr-table {
+    width: 90%;
+    margin: 0 auto 2em auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.dupr-table th {
+    background-color: var(--green);
+    color: var(--porcelain);
+    padding: 0.8em;
+    border: 2px solid var(--shadow-grey);
+    white-space: nowrap;
+}
+
+.dupr-table td {
+    border: 2px solid var(--shadow-grey);
+    padding: 0.8em;
+    color: var(--shadow-grey);
+}
+
+.dupr-table tr:nth-child(even) {
+    background-color: #E3E3E3; 
+}
+
 /* Video Section */
 .watch-section {
     background-color: lightgrey;
