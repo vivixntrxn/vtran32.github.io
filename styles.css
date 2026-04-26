@@ -256,7 +256,7 @@ body {
 }
 
 /* Rules Section */
-.rules-intro {
+.rules-intro, .dupr-description, .paddle-description, .approved-link {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95em;
     color: var(--shadow-grey);
@@ -358,7 +358,7 @@ body {
 /* Common Terminology Section */
 .term-grid {
     display: grid;
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     padding: 0 1em;
 }
@@ -381,15 +381,6 @@ body {
 }
 
 /* DUPR Section */
-.dupr-description {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.95em;
-    color: var(--shadow-grey);
-    line-height: 1.5;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 .dupr-table {
     width: 90%;
     margin: 0 auto 2em auto;
@@ -414,6 +405,98 @@ body {
 
 .dupr-table tr:nth-child(even) {
     background-color: #E3E3E3; 
+}
+
+/* Paddles 1 Section */
+.paddle-grid, .find-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.paddle-card, .find-card {
+    border: 2px solid var(--shadow-grey);
+    border-radius: 15px;
+    padding: 0.2em 1em;
+}
+
+.paddle-card h3, .find-card h3 {
+    color: var(--green);
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+}
+
+.paddle-card .paddle-options, .find-tagline {
+    color: var(--ocean-blue);
+    font-size: 0.9em;
+    margin-top: -0.3em;
+}
+
+.paddle-bullets {
+    padding-left: 1.5em;
+}
+
+.paddle-bullets li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: var(--shadow-grey);
+    padding-bottom: 1em;
+    line-height: 1.5;
+}
+
+.paddle-bullets li:last-child {
+    padding-bottom: 0;
+}
+
+/* Paddles 2 Section */
+.paddle-link-card {
+    background-color: var(--emerald);
+    border-radius: 10px;
+    border: 1px solid var(--shadow-grey);
+    margin: 0.6em 0;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.paddle-link {
+    display: block;
+    text-decoration: none;
+    color: var(--shadow-grey);
+    padding: 0.8em 1em;
+}
+
+.paddle-link-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.paddle-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.paddle-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.paddle-name {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.paddle-price {
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    opacity: 0.9;
+}
+
+.paddle-link-card:hover {
+    background-color: lightgrey;
+    transform: scale(1.03);
 }
 
 /* Video Section */
