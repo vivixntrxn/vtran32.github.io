@@ -256,7 +256,7 @@ body {
 }
 
 /* Rules Section */
-.rules-intro, .dupr-description, .paddle-description, .approved-link {
+.rules-intro, .dupr-description, .paddle-description, .approved-link, .ball-description {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95em;
     color: var(--shadow-grey);
@@ -349,7 +349,7 @@ body {
     text-align: center;
 }
 
-.scoring-explainer li {
+.scoring-explainer li, .ball-column li {
     margin-bottom: 0.7em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
@@ -381,7 +381,7 @@ body {
 }
 
 /* DUPR Section */
-.dupr-table {
+.dupr-table, .balls-table {
     width: 90%;
     margin: 0 auto 2em auto;
     border-collapse: collapse;
@@ -389,7 +389,7 @@ body {
     font-size: 0.9em;
 }
 
-.dupr-table th {
+.dupr-table th, .balls-table th {
     background-color: var(--green);
     color: var(--porcelain);
     padding: 0.8em;
@@ -397,13 +397,13 @@ body {
     white-space: nowrap;
 }
 
-.dupr-table td {
+.dupr-table td, .balls-table td {
     border: 2px solid var(--shadow-grey);
     padding: 0.8em;
     color: var(--shadow-grey);
 }
 
-.dupr-table tr:nth-child(even) {
+.dupr-table tr:nth-child(even), .balls-table tr:nth-child(even) {
     background-color: #E3E3E3; 
 }
 
@@ -497,6 +497,11 @@ body {
 .paddle-link-card:hover {
     background-color: lightgrey;
     transform: scale(1.03);
+}
+
+/* Balls Selection */
+.ball-link {
+    color: var(--ocean-blue)
 }
 
 /* Video Section */
