@@ -102,7 +102,7 @@
 
             <a href="feedback.html" class="learn-card form-card">
                 <h3>Have Questions or Suggestions?</h3>
-                <button class="feedback-btn">Give Feedback</button>
+                <span class="feedback-btn">Give Feedback</span>
             </a>
         </section>
 
@@ -155,34 +155,34 @@
             </p>
         </footer>
     </div>
+
+    <!-- Javascript for Navigation -->
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('open');
+            }
+        });
+
+        // Highlight current page link
+        let currentPage = window.location.pathname.split('/').pop();
+
+        if (currentPage === "" || currentPage === "/") {
+            currentPage = "index.html";
+        }
+
+        const navItems = document.querySelectorAll('.nav-links li a');
+        navItems.forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+            }
+        });
+    </script>
 </body>
-
-<!-- Javascript for Navigation -->
-<script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
-            navLinks.classList.remove('open');
-        }
-    });
-
-    // Highlight current page link
-    let currentPage = window.location.pathname.split('/').pop();
-
-    if (currentPage === "" || currentPage === "/") {
-        currentPage = "index.html";
-    }
-
-    const navItems = document.querySelectorAll('.nav-links li a');
-    navItems.forEach(item => {
-        if (item.getAttribute('href') === currentPage) {
-            item.classList.add('active');
-        }
-    });
-</script>

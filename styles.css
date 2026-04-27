@@ -197,7 +197,7 @@ body {
     font-family: Georgia, "Times New Roman", serif;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0 1.5;
+    gap: 0 1.5em;
 }
 
 .learn-card {

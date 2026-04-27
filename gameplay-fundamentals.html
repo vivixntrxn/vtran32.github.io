@@ -44,7 +44,7 @@
         <!-- Hero Section -->
         <section class="hero-wrapper fundamentals-hero">
             <div class="hero">
-            <h2>Gameplay Fundamentals</h2>
+                <h2>Gameplay Fundamentals</h2>
                 <div class="stats">
                     <div class="stat">
                         <a href="#rules" class="label">Rules</a>
@@ -373,29 +373,29 @@
             </p>
         </footer>
     </div>
+
+    <!-- Javascript for Navigation -->
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('open');
+            }
+        });
+
+        // Highlight current page link
+        const currentPage = window.location.pathname.split('/').pop();
+        const navItems = document.querySelectorAll('.nav-links li a');
+        navItems.forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+            }
+        });
+    </script>
 </body>
-
-<!-- Javascript for Navigation -->
-<script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
-            navLinks.classList.remove('open');
-        }
-    });
-
-    // Highlight current page link
-    const currentPage = window.location.pathname.split('/').pop();
-    const navItems = document.querySelectorAll('.nav-links li a');
-    navItems.forEach(item => {
-        if (item.getAttribute('href') === currentPage) {
-            item.classList.add('active');
-        }
-    });
-</script>
